@@ -6,7 +6,7 @@ import { useState } from 'react';
 function App() {
   const [data,setData] = useState(false)
   const openWindow = ()=>{
-    window.open('/Param?code=1234','test','width=600,height=600,top=100,left=100')
+    window.open('popup/Param?code=1234','test','width=600,height=600,top=100,left=100')
   }
   window.callParent = function(){
     setData(true)
