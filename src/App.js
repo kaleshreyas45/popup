@@ -18,8 +18,7 @@ function App() {
   },[])
   return (
     <>
-    {popup && <h1>popup</h1>}
-      <h1>Main window</h1>
+    {popup ? <h1>popup</h1>: <h1>Main window</h1>}
       <button onClick={openWindow}>Click</button>
     </>
 
