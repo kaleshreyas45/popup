@@ -15,7 +15,7 @@ function App() {
     <>
       {data?<h1>Shreyas</h1>:""}
       <button onClick={openWindow}>Click</button>
-      <Route path="/Param">
+      <Route path="/popup/Param">
         <Param></Param>
       </Route>
     </>
