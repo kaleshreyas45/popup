@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { Route } from 'react-router-dom';
+import Param from './Param';
+import { useState } from 'react';
 function App() {
+  const [data,setData] = useState(false)
+  const openWindow = ()=>{
+    window.open('/Param?code=1234','test','width=600,height=600,top=100,left=100')
+  }
+  window.callParent = function(){
+    setData(true)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {data?<h1>Shreyas</h1>:""}
+      <button onClick={openWindow}>Click</button>
+      <Route path="/Param">
+        <Param></Param>
+      </Route>
+    </>
+
   );
 }
 
